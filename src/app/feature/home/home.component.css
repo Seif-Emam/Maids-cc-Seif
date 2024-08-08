@@ -1,0 +1,40 @@
+.container{
+    width: 90%;
+    margin: auto;
+    padding-block: 40px;
+}
+.search{
+    padding-block:40px ;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    
+}
+.card{
+    width: 30%;
+}
+.spiner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media only screen and (max-width: 600px ) {
+    .card{
+        width: 90%;
+    }
+}
+@media only screen and (min-width: 601px) {
+    .card{
+        width: 45%;
+    } 
+}
+@media only screen and (min-width: 992px) {
+    .card{
+        width: 30%;
+    }
+    
+}

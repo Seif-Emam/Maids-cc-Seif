@@ -1,0 +1,128 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #c3ec52 25%, #0ba29d 100%) !important;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+body::before,
+body::after {
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  z-index: 0;
+  animation: floating 6s ease-in-out infinite;
+}
+
+body::before {
+  top: 10%;
+  left: 20%;
+  animation-duration: 8s;
+}
+
+body::after {
+  bottom: 15%;
+  right: 15%;
+}
+
+@keyframes floating {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.card {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 20px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  color: #333;
+  background: linear-gradient(145deg, #e0e0e0, #ffffff);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.15);
+}
+
+.card-img {
+  width: 50%;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid #feb47b;
+}
+
+.card-img img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.btn {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(145deg, #ff7e5f, #feb47b);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+
+.btn:hover {
+  background: linear-gradient(145deg, #feb47b, #ff7e5f);
+  color: #333;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+span{
+  color: #ff7e5f;
+}
+
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-item {
+  display: flex;
+  margin-bottom: 10px; 
+}
+
+.info-label {
+  font-weight: bold;
+  margin-right: 5px; 
+}
+
+.info-separator {
+  margin-right: 5px; 
+}
+
+.info-value {
+  color: #ff7e5f; 
+}

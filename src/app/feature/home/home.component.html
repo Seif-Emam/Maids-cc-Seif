@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="search">
+        <form [formGroup]="formGroup" (change)="handelSearch()">
+            <app-input
+            [id]="'Search'"
+            [placeholder]="'Search...'"
+            [type]="'text'"
+            [control]="formGroup.controls.searchValue"
+            >
+        </app-input>
+        </form>
+    </div>
+    @if(isLoading){
+        <div class="spiner"><span class="loader"></span></div>
+    }
+    <div class="flex">
+    @for (user of allUsers; track user.id) {
+        <div class="card">
+            <app-card
+            [userData]="user"
+
+            >
+            </app-card>
+        </div>
+    }
+    </div>
+</div>

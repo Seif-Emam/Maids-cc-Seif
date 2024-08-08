@@ -1,0 +1,23 @@
+<div class="card">
+  <div class="card-img">
+    <img src="{{ userData.avatar }}" alt="" />
+  </div>
+  <div class="card-info">
+    <div class="info-item">
+      <span class="info-label">Email</span>
+      <span class="info-separator">:</span>
+      <span class="info-value">{{userData.email}}</span>
+    </div>
+    <div class="info-item">
+      <span class="info-label">First Name</span>
+      <span class="info-separator">:</span>
+      <span class="info-value">{{userData.first_name}}</span>
+    </div>
+    <div class="info-item">
+      <span class="info-label">Last Name</span>
+      <span class="info-separator">:</span>
+      <span class="info-value">{{userData.last_name}}</span>
+    </div>
+    <button class="btn" (click)="handelProfile()">More Info</button>
+  </div>
+</div>
